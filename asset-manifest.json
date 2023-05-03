@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/chef_samurai/static/css/main.0aff831a.css",
+    "main.js": "/chef_samurai/static/js/main.2fdb8124.js",
+    "index.html": "/chef_samurai/index.html",
+    "static/media/mode-icon.svg": "/chef_samurai/static/media/mode-icon.adfdeb5d80d0a098239dc34660b76b80.svg",
+    "static/media/trashcan.svg": "/chef_samurai/static/media/trashcan.1129c53a10f3c716357028ea030e9d23.svg",
+    "main.0aff831a.css.map": "/chef_samurai/static/css/main.0aff831a.css.map",
+    "main.2fdb8124.js.map": "/chef_samurai/static/js/main.2fdb8124.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0aff831a.css",
+    "static/js/main.2fdb8124.js"
+  ]
+}
