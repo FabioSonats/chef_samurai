@@ -52,7 +52,6 @@ export default function Recipe() {
           {recipe.ingredients && recipe.ingredients.map((ing) => <li key={ing}>{ing}</li>)}
           </ul>
           <p className='method'>{recipe.method}</p>
-          //<button onClick={handleClick}>Atualziar</button>
         </>
       )}
     </div>
