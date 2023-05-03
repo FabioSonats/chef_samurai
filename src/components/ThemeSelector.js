@@ -4,13 +4,14 @@ import  modeIcon  from '../assets/mode-icon.svg'
 //styles
 import './ThemeSelector.css'
 
-const themeColors = ['#58249c', '#8B0000', '#696969']
+const themeColors = ['#58249c', '#2F4F4F', '#b70233']
 
 export default function ThemeSelector() {
-    const {changeColor, changeMode, mode } = useTheme()
+    const {changeColor, changeMode, mode } = useTheme(false)
+
 
     const toggleMode = () => {
-        changeMode(mode === 'dark' ? 'light' : 'dark')
+        changeMode(mode === 'light' ? 'dark' : 'light')
 
     }
     console.log(mode)
