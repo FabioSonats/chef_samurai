@@ -1,0 +1,131 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "title": "Veggie Stew",
+      "ingredients": [
+        "1 Carrot",
+        "1 Leek",
+        "200g Tofu",
+        "300ml Veg stock"
+      ],
+      "method": "1. Pre-heat the oven to 200C/3C/gas 5. Place the carrot, leek and tofu in a large bowl. Add the stock and mix well. 2. Add the rest of the ingredients and mix well. 3. Place the mixture in a large bowl and cover with a lid. 4. Place the lid on the oven and cook for 40 minutes. 5. Serve with a slaw of your choice",
+      "cookingTime": "45 minutos"
+    },
+    {
+      "id": "2",
+      "title": "Veggie Pizza",
+      "ingredients": [
+        "1 Base",
+        "Tomata pasata",
+        "1 Green pepper",
+        "100g Mushrooms"
+      ],
+      "method": "1. Pre-heat the oven to 200C/3C/gas 5. Add the pasata, green pepper and mushrooms to the base. Place the lid on the oven and cook for 30 minutes. 5. Serve with a slaw of your choice",
+      "cookingTime": "35 minutos"
+    },
+    {
+      "id": "3",
+      "title": "Greek Salad",
+      "ingredients": [
+        "1 Onion",
+        "1 Block of Feta",
+        "Olives",
+        "Tomatoes",
+        "Olive Oil"
+      ],
+      "method": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse minima ex rem quis similique eum ratione quaerat, voluptas molestias ut repudiandae delectus voluptates. Eius esse at tenetur ab accusamus excepturi?",
+      "cookingTime": "35 minutos"
+    },
+    {
+      "title": "Torta vegetariana",
+      "ingredients": [
+        "cogumelos",
+        "cebola",
+        "tofu",
+        "alho",
+        "tomate"
+      ],
+      "method": "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60",
+      "cookingTime": "45minutes",
+      "id": "02BSMUp"
+    },
+    {
+      "title": "Torta vegetariana",
+      "ingredients": [
+        "cogumelos",
+        "cebola",
+        "tofu",
+        "alho",
+        "tomate"
+      ],
+      "method": "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60",
+      "cookingTime": "45minutes",
+      "id": "-ftXzzW"
+    },
+    {
+      "title": "Torta vegetariana de cogumelos",
+      "ingredients": [
+        "cebola",
+        "alho",
+        "cugumelos",
+        "vagem",
+        "cenoura",
+        "farinha",
+        "ovos"
+      ],
+      "method": "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60",
+      "cookingTime": "60minutes",
+      "id": "3xzKMgr"
+    },
+    {
+      "title": "torta de frango",
+      "ingredients": [
+        "cebola, couve",
+        "alho",
+        "cenoura",
+        "1 peito de frango",
+        "ovos",
+        "farinha"
+      ],
+      "method": "orem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, perman",
+      "cookingTime": "75minutes",
+      "id": "2clA1Ha"
+    },
+    {
+      "title": "Frango assado",
+      "ingredients": [
+        "1 frango inteiro",
+        "cebola",
+        "temperos",
+        "azeite",
+        "churrasqeueira"
+      ],
+      "method": "orem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, perman",
+      "cookingTime": "82minutes",
+      "id": "6gl6XDc"
+    },
+    {
+      "title": "Frango assado",
+      "ingredients": [
+        "trigo",
+        "farofa"
+      ],
+      "method": "orem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, perman",
+      "cookingTime": "45minutes",
+      "id": "WWc-qSc"
+    },
+    {
+      "title": "Salada mista",
+      "ingredients": [
+        "blah",
+        "ovo",
+        "alface",
+        "cenoura"
+      ],
+      "method": "orem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, perman",
+      "cookingTime": "50minutes",
+      "id": "k9jztO8"
+    }
+  ]
+}
