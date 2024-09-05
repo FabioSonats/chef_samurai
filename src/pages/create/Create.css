@@ -1,35 +1,76 @@
 .create {
-color: #555;
-max-width: 480px;
-margin: 60px auto;
-
+    color: #333; /* Cor de texto mais suave */
+    max-width: 600px; /* Aumenta a largura máxima para um layout mais espaçoso */
+    margin: 60px auto;
+    padding: 20px; /* Adiciona um pouco de padding para dar mais espaço ao redor dos elementos */
+    background: #f9f9f9; /* Fundo leve para destacar o formulário */
+    border-radius: 8px; /* Bordas arredondadas para um design mais moderno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para dar profundidade */
 }
+
 .create label span {
     display: block;
-    margin: 30px 0 10px;
+    margin: 20px 0 10px; /* Ajusta margens para mais consistência */
+    font-weight: bold; /* Negrito para os títulos dos campos */
+    color: #555; /* Cor um pouco mais escura para contraste */
 }
-.crete p {
+
+.create p {
     margin-top: 10px;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    color: #777; /* Cor neutra para textos explicativos */
 }
+
 .create button {
     display: block;
-    width: 100px auto;
+    width: 150px; /* Aumenta o botão para ser mais fácil de clicar */
     font-size: 1em;
     color: #fff;
-    padding: 8px 20px;
+    padding: 10px; /* Mais padding para botões maiores */
     border: 0;
     border-radius: 4px;
     background-color: #58249c;
     cursor: pointer;
     text-decoration: none;
     margin: 20px auto;
-
+    transition: background-color 0.3s ease; /* Animação suave ao passar o mouse */
 }
+
+.create button:hover {
+    background-color: #4a1d8d; /* Cor diferente ao passar o mouse */
+}
+
 .ingredients {
     display: flex;
     align-items: center;
+    margin-bottom: 20px; /* Adiciona espaço abaixo dos ingredientes */
 }
+
+.ingredients input {
+    flex: 1; /* Faz o campo de entrada crescer para preencher o espaço */
+    margin-right: 10px;
+    padding: 8px; /* Adiciona padding para consistência */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
 .ingredients button {
-    margin: 000 10px;
+    margin: 0 10px;
+    padding: 8px 12px; /* Ajusta padding para botões de ingredientes */
+    font-size: 0.9em;
+    background-color: #58249c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ingredients button:hover {
+    background-color: #4a1d8d;
+}
+
+/* Margem inferior para todas as páginas */
+body {
+    margin-bottom: 40px; /* Adiciona margem inferior para todas as páginas */
 }

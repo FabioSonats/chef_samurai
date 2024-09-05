@@ -1,30 +1,78 @@
+/* Estilo geral do container da receita */
 .recipe {
-    max-width: 1200px;
+    max-width: 800px; /* Reduzido para centralizar melhor o conteúdo */
     margin: 40px auto;
     text-align: center;
-    background: #fff;
-    padding: 40px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o card */
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Tipografia mais moderna */
 }
 
+/* Estilo para o título da receita */
+.recipe h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Estilo para o tempo de preparo */
+.recipe p {
+    color: #777;
+    font-size: 1em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Lista de ingredientes alinhada ao centro */
 .recipe ul {
     display: flex;
+    flex-wrap: wrap; /* Para os itens da lista quebrarem em múltiplas linhas se necessário */
     padding: 0;
     justify-content: center;
-    margin-top: 0;
+    margin: 20px 0;
 }
+
 .recipe li {
     list-style-type: none;
-    margin-right: 10px;
-    color: #777;
+    margin: 5px 10px;
+    color: #555;
+    font-size: 0.9em;
+    position: relative;
+    padding-right: 10px;
 }
+
 .recipe li::after {
     content: ",";
+    position: absolute;
+    right: 0;
 }
+
 .recipe li:last-child::after {
     content: ".";
 }
+
+/* Estilo para o método de preparo */
 .method {
     text-align: left;
-    line-height: 1.5em;
+    line-height: 1.8em;
+    font-size: 0.95em;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Estilo do modo escuro */
+.recipe.dark {
+    background: #333;
+    color: #e4e4e4;
+}
+
+.recipe.dark h2,
+.recipe.dark p,
+.recipe.dark ul li,
+.method {
+    color: #f0f0f0;
 }
