@@ -1,64 +1,104 @@
+/* Layout principal da lista de receitas */
 .recipe-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
-    max-width: 1200;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo, ajusta o número de colunas automaticamente */
+    gap: 30px; /* Espaço entre os cards */
+    max-width: 1200px;
     margin: 40px auto;
-
+    padding: 0 20px; /* Adiciona padding lateral para dispositivos menores */
 }
 
+/* Estilos para o card de receita */
 .recipe-list .card {
-    background: #fff;
+    background: #ffffff;
     color: #333;
     padding: 20px;
-    border-radius: 4px;
-    box-shadow:  3px 3px 3px rgba(0,0,0,0.05);
-    transition: relative;
-}
-.recipe-list .card:hover {
-    transform: rotate(2deg);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mais suave e destacada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação de transição suave */
+    position: relative;
+    overflow: hidden; /* Para garantir que elementos internos não saiam dos limites */
 }
 
+.recipe-list .card:hover {
+    transform: translateY(-5px); /* Levanta levemente o card ao passar o mouse */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Sombra mais forte ao hover */
+}
+
+/* Estilo do título da receita */
 .recipe-list .card h3 {
-    color: #555;
-    margin-bottom: 6px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.2em;
 }
+
+/* Estilo da descrição da receita */
 .recipe-list .card p {
-    color: #999;
-    font-size: 0.9em;
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.5em;
+    margin-bottom: 20px;
 }
-.recipe-list card div {
-    color: #555;
-    font-size: 0.7em;
-    margin: 20px 0;
-    line-height: 1.5em; 
+
+/* Estilo para o tempo de preparo */
+.recipe-list .card div {
+    color: #888;
+    font-size: 0.85em;
+    margin: 10px 0;
 }
+
+/* Estilo do link para a receita completa */
 .recipe-list .card a {
-    color: #555;
+    color: #fff;
     text-decoration: none;
-    display: block;
-    background: #e2e2e2;
+    display: inline-block;
+    background: #6c63ff; /* Cor de destaque */
     font-size: 0.9em;
     text-align: center;
-    width: 120px;
-    padding: 8px;
-    border-radius: 4px;
-    margin: 20px auto;
+    width: 140px;
+    padding: 10px 0;
+    border-radius: 25px; /* Botão com borda arredondada */
+    margin: 10px auto;
+    transition: background 0.3s ease; /* Animação de transição para o hover */
 }
+
+/* Estilo de hover do link */
+.recipe-list .card a:hover {
+    background: #5953c1; /* Cor do botão ao passar o mouse */
+}
+
+/* Botão de deletar receita */
 .delete {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
     filter: invert(60%);
+    transition: transform 0.2s ease;
 }
 
-/*dark mode*/
-.recipe-list .card.dark {
-    background: #555;
+.delete:hover {
+    transform: scale(1.1); /* Aumenta o ícone de delete ao passar o mouse */
 }
+
+/* Estilos para o modo escuro */
+.recipe-list .card.dark {
+    background: #333;
+    color: #e4e4e4;
+}
+
 .recipe-list .card.dark p,
 .recipe-list .card.dark h3,
 .recipe-list .card.dark div {
-    color: #e4e4e4;
+    color: #f0f0f0;
+}
+
+.recipe-list .card.dark a {
+    background: #555;
+    color: #f0f0f0;
+}
+
+.recipe-list .card.dark a:hover {
+    background: #444;
 }

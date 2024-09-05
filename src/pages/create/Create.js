@@ -16,11 +16,11 @@ export default function Create() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const doc = {title, ingredients, method, cookingTime: cookingTime + 'minutes'}
+    const doc = {title, ingredients, method, cookingTime: cookingTime + ' minutos'}
 
     try {
       projectFirestore.collection('recipes').add(doc)
-      history.push('/home')
+      history.push('/')
 
     } catch(err) {
       console.log(err)
