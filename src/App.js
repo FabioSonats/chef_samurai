@@ -1,25 +1,25 @@
+import React from 'react';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
-
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
- // pages components
-import Navbar from './components/Navbar'; 
+// Importar os componentes necessários
+import Navbar from './components/Navbar';
 import Home from './pages/home/Home';
 import Create from './pages/create/Create';
 import Search from './pages/search/Search';
 import Recipe from './pages/recipe/Recipe';
-import './App.css'
 import ThemeSelector from './components/ThemeSelector';
-import { useTheme } from './hooks/useTheme';
+import { useTheme } from './hooks/useTheme'; // Importar o hook
+
+import './App.css'; // Use HashRouter
 
 function App() {
-  const {mode} = useTheme()
-
+  const { mode } = useTheme();
 
   return (
     <div className={`App ${mode}`}>
-      <BrowserRouter>
+      <HashRouter> {/* Alterar de BrowserRouter para HashRouter */}
         <Navbar />
-        <ThemeSelector/>
+        <ThemeSelector />
         <Switch>
           <Route exact path="/">
             <Home />
@@ -34,9 +34,9 @@ function App() {
             <Recipe />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
 
-export default App
+export default App;
