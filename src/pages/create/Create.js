@@ -1,92 +1,168 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { projectFirestore } from '../../firebase/config';
-//styles
-import './Create.css'
 
 export default function Create() {
   const [title, setTitle] = useState('')
   const [method, setMethod] = useState('')
   const [cookingTime, setCookingTime] = useState('')
   const [newIngredient, setNewIngredient] = useState('')
-  const [ingredients, setIngridients] = useState([])
+  const [ingredients, setIngredients] = useState([])
   const ingredientsInput = useRef(null)
   const history = useHistory()
 
-
   const handleSubmit = (e) => {
     e.preventDefault()
-    const doc = {title, ingredients, method, cookingTime: cookingTime + 'minutes'}
+    const doc = { title, ingredients, method, cookingTime: cookingTime + ' minutes' }
 
     try {
       projectFirestore.collection('recipes').add(doc)
-      history.push('/home')
-
-    } catch(err) {
+      history.push('/')
+    } catch (err) {
       console.log(err)
     }
-
-   }
+  }
 
   const handleAdd = (e) => {
     e.preventDefault()
     const ing = newIngredient.trim()
 
-
-    if (ing && !ingredients.includes(ing)){
-      setIngridients(prevIngredients => [...prevIngredients, ing])
+    if (ing && !ingredients.includes(ing)) {
+      setIngredients(prevIngredients => [...prevIngredients, ing])
     }
     setNewIngredient('')
     ingredientsInput.current.focus()
   }
 
+  const removeIngredient = (ingredientToRemove) => {
+    setIngredients(ingredients.filter(ing => ing !== ingredientToRemove))
+  }
+
   return (
-    <div className='create'>
-      <h2 className='page-title'>Adicione uma nova receita</h2>
+    <div className="min-h-screen py-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            Criar Nova Receita
+          </h1>
+          <p className="text-lg text-gray-600">
+            Compartilhe sua receita deliciosa com o mundo!
+          </p>
+        </div>
 
-      
-      
-      <form onSubmit={handleSubmit}>
+        <div className="max-w-2xl mx-auto">
+          <form onSubmit={handleSubmit} className="space-y-8">
+            {/* Nome da Receita */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+              <label className="block">
+                <span className="text-lg font-semibold text-gray-700 mb-3 block">
+                  Nome da Receita
+                </span>
+                <input
+                  type='text'
+                  onChange={(e) => setTitle(e.target.value)}
+                  value={title}
+                  placeholder="Ex: Bolo de Chocolate"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white"
+                  required
+                />
+              </label>
+            </div>
 
-        <label>
-          <span>Nome da receita</span>
-          <input type='text' onChange={(e) => setTitle(e.target.value)}
-          value={title}
-          required/>
-        </label>
+            {/* Ingredientes */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+              <label className="block">
+                <span className="text-lg font-semibold text-gray-700 mb-3 block">
+                  Ingredientes
+                </span>
+                <div className="flex gap-2 mb-4">
+                  <input
+                    type='text'
+                    onChange={(e) => setNewIngredient(e.target.value)}
+                    value={newIngredient}
+                    ref={ingredientsInput}
+                    placeholder="Ex: 2 xícaras de farinha"
+                    className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleAdd}
+                    className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 shadow-md px-6"
+                  >
+                    Adicionar
+                  </button>
+                </div>
 
-        <label>
-          <span>Ingredientes:</span>
-          <div className='ingredients'></div>
-          <input 
-              type='text'
-              onChange={(e) => setNewIngredient(e.target.value)}
-              value={newIngredient}
-              ref={ingredientsInput}
-           />
-          <button onClick={handleAdd} className='button' >adicionar</button>
-        </label>
-        <p>Ingredientes adicionados: {ingredients.map(i => <em key={i}>{i}, </em>)}</p>
-        <label>
-          <span>Modo de preparo:</span>
-          <textarea
-            onChange={(e) => setMethod(e.target.value)}
-            value={method}
-            required
-             />
-        </label>
-        <label>
-          <span>Tempo de preparo (minutos) </span>
-          <input type='number'
-          onChange={(e) => setCookingTime(e.target.value)}
-          value={cookingTime}
-          required />
-        </label>
+                {ingredients.length > 0 && (
+                  <div className="bg-green-50 rounded-lg p-4">
+                    <p className="text-sm font-medium text-gray-700 mb-2">Ingredientes adicionados:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {ingredients.map(ingredient => (
+                        <span
+                          key={ingredient}
+                          className="bg-green-500 text-white px-3 py-1 rounded-full text-sm flex items-center gap-2"
+                        >
+                          {ingredient}
+                          <button
+                            type="button"
+                            onClick={() => removeIngredient(ingredient)}
+                            className="text-white hover:text-red-200"
+                          >
+                            ×
+                          </button>
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </label>
+            </div>
 
-        <button className='button'>Enviar</button>
-      </form>
+            {/* Modo de Preparo */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+              <label className="block">
+                <span className="text-lg font-semibold text-gray-700 mb-3 block">
+                  Modo de Preparo
+                </span>
+                <textarea
+                  onChange={(e) => setMethod(e.target.value)}
+                  value={method}
+                  placeholder="Descreva passo a passo como preparar a receita..."
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white min-h-[200px] resize-y"
+                  required
+                />
+              </label>
+            </div>
 
-      
+            {/* Tempo de Preparo */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+              <label className="block">
+                <span className="text-lg font-semibold text-gray-700 mb-3 block">
+                  Tempo de Preparo (minutos)
+                </span>
+                <input
+                  type='number'
+                  onChange={(e) => setCookingTime(e.target.value)}
+                  value={cookingTime}
+                  placeholder="Ex: 30"
+                  className="w-full max-w-xs px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white"
+                  required
+                />
+              </label>
+            </div>
+
+            {/* Botão de Envio */}
+            <div className="text-center">
+              <button 
+                type="submit"
+                className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 shadow-md text-lg"
+              >
+                Criar Receita
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   )
 }

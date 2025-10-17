@@ -1,29 +1,30 @@
 import { useState } from 'react'
-import './Searchbar.css'
 import { useHistory } from 'react-router-dom'
 
 export default function Searchbar() {
-    const [term, setTerm] =useState('')
+    const [term, setTerm] = useState('')
     const history = useHistory()
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
         history.push(`/search?q=${term}`)
     }
 
   return (
-    <div className='searchbar'>
-        <form onSubmit={handleSubmit}>
-            <label htmlFor='search'>Pesquisar</label>
-            <input 
-            type='text'
-            id='search'
-            onChange={(e) => setTerm(e.target.value)}
-            required
-            />
+    <div className="w-full">
+        <form onSubmit={handleSubmit} className="relative">
+            <div className="relative">
+                <input 
+                    type='text'
+                    id='search'
+                    placeholder="Pesquisar receitas..."
+                    value={term}
+                    onChange={(e) => setTerm(e.target.value)}
+                    className="w-full px-4 py-2 bg-white bg-opacity-90 border border-white border-opacity-20 rounded-full text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:border-transparent transition-all duration-200"
+                    required
+                />
+            </div>
         </form>
-      
     </div>
   )
 }
