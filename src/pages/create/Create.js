@@ -153,7 +153,7 @@ export default function Create() {
 
             {/* Botão de Envio */}
             <div className="text-center">
-              <button 
+              <button
                 type="submit"
                 className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 shadow-md text-lg"
               >
