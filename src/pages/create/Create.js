@@ -42,10 +42,10 @@ export default function Create() {
     <div className="min-h-screen py-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl font-bold text-charcoal mb-4">
             Criar Nova Receita
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-brown">
             Compartilhe sua receita deliciosa com o mundo!
           </p>
         </div>
@@ -53,60 +53,60 @@ export default function Create() {
         <div className="max-w-2xl mx-auto">
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* Nome da Receita */}
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+            <div className="bg-warm-white rounded-xl shadow-warm p-6 border border-golden border-opacity-20">
               <label className="block">
-                <span className="text-lg font-semibold text-gray-700 mb-3 block">
+                <span className="text-lg font-semibold text-charcoal mb-3 block">
                   Nome da Receita
                 </span>
-                <input
-                  type='text'
+                <input 
+                  type='text' 
                   onChange={(e) => setTitle(e.target.value)}
                   value={title}
                   placeholder="Ex: Bolo de Chocolate"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white"
+                  className="w-full px-4 py-3 border border-golden border-opacity-30 rounded-lg focus:ring-2 focus:ring-tomato focus:border-transparent transition-all duration-200 bg-warm-white"
                   required
                 />
               </label>
             </div>
 
             {/* Ingredientes */}
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+            <div className="bg-warm-white rounded-xl shadow-warm p-6 border border-golden border-opacity-20">
               <label className="block">
-                <span className="text-lg font-semibold text-gray-700 mb-3 block">
+                <span className="text-lg font-semibold text-charcoal mb-3 block">
                   Ingredientes
                 </span>
                 <div className="flex gap-2 mb-4">
-                  <input
+                  <input 
                     type='text'
                     onChange={(e) => setNewIngredient(e.target.value)}
                     value={newIngredient}
                     ref={ingredientsInput}
                     placeholder="Ex: 2 xícaras de farinha"
-                    className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white"
+                    className="flex-1 px-4 py-3 border border-golden border-opacity-30 rounded-lg focus:ring-2 focus:ring-tomato focus:border-transparent transition-all duration-200 bg-warm-white"
                   />
-                  <button
+                  <button 
                     type="button"
-                    onClick={handleAdd}
-                    className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 shadow-md px-6"
+                    onClick={handleAdd} 
+                    className="bg-fresh-green hover:bg-herb text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 shadow-warm px-6"
                   >
                     Adicionar
                   </button>
                 </div>
 
                 {ingredients.length > 0 && (
-                  <div className="bg-green-50 rounded-lg p-4">
-                    <p className="text-sm font-medium text-gray-700 mb-2">Ingredientes adicionados:</p>
+                  <div className="bg-fresh-green bg-opacity-10 rounded-lg p-4">
+                    <p className="text-sm font-medium text-charcoal mb-2">Ingredientes adicionados:</p>
                     <div className="flex flex-wrap gap-2">
                       {ingredients.map(ingredient => (
-                        <span
+                        <span 
                           key={ingredient}
-                          className="bg-green-500 text-white px-3 py-1 rounded-full text-sm flex items-center gap-2"
+                          className="bg-fresh-green text-white px-3 py-1 rounded-full text-sm flex items-center gap-2"
                         >
                           {ingredient}
                           <button
                             type="button"
                             onClick={() => removeIngredient(ingredient)}
-                            className="text-white hover:text-red-200"
+                            className="text-white hover:text-warm-red"
                           >
                             ×
                           </button>
@@ -153,9 +153,9 @@ export default function Create() {
 
             {/* Botão de Envio */}
             <div className="text-center">
-              <button
+              <button 
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 shadow-md text-lg"
+                className="bg-tomato hover:bg-orange text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 shadow-warm text-lg"
               >
                 Criar Receita
               </button>

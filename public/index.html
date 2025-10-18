@@ -31,26 +31,43 @@
         theme: {
           extend: {
             colors: {
-              'pastel-pink': '#FFB3BA',
-              'pastel-orange': '#FFDFBA',
-              'pastel-yellow': '#FFFFBA',
-              'pastel-green': '#BAFFC9',
-              'pastel-blue': '#BAE1FF',
-              'pastel-purple': '#E1BAFF',
-              'soft-gray': '#F8F9FA',
-              'warm-gray': '#F1F3F4',
-              'sage-green': '#A8C8A8',
-              'lavender': '#E6E6FA',
-              'peach': '#FFCCCB',
-              'mint': '#F0FFF0',
+              // Cores quentes que estimulam o apetite
+              'warm-red': '#E53E3E',      // Vermelho quente
+              'tomato': '#FF6B35',        // Tomate vibrante
+              'orange': '#FF8C42',        // Laranja acolhedor
+              'golden': '#FFD23F',        // Dourado apetitoso
+              'honey': '#F4A261',         // Mel quente
+              
+              // Cores de comida naturais
+              'fresh-green': '#68D391',   // Verde fresco
+              'sage': '#9CAF88',          // Sálvia suave
+              'olive': '#A8B5A0',         // Azeitona
+              'herb': '#7FB069',          // Ervas
+              
+              // Cores neutras elegantes
+              'cream': '#FFF8E7',         // Creme suave
+              'warm-white': '#FEFEFE',    // Branco quente
+              'soft-gray': '#F7FAFC',     // Cinza suave
+              'charcoal': '#2D3748',      // Carvão elegante
+              'brown': '#8B4513',         // Marrom terra
+              
+              // Cores de temperos
+              'paprika': '#D2691E',       // Páprica
+              'cinnamon': '#D2691E',      // Canela
+              'nutmeg': '#8B4513',        // Noz-moscada
             },
             fontFamily: {
               'sans': ['Inter', 'system-ui', 'sans-serif'],
             },
             boxShadow: {
+              'warm': '0 4px 20px -2px rgba(255, 107, 53, 0.15)',
+              'food': '0 8px 25px -5px rgba(255, 107, 53, 0.2)',
               'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
-              'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
             },
+            backgroundImage: {
+              'food-gradient': 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFD23F 100%)',
+              'warm-gradient': 'linear-gradient(135deg, #FFF8E7 0%, #FFE4B5 100%)',
+            }
           }
         }
       }

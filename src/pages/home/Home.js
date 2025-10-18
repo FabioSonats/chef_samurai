@@ -50,14 +50,14 @@ export default function Home() {
     <div className="min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl font-bold text-charcoal mb-4">
             Receitas Deliciosas
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-brown max-w-2xl mx-auto">
             Descubra receitas incríveis e compartilhe suas criações culinárias
           </p>
           {allRecipes.length > 0 && (
-            <p className="text-sm text-gray-500 mt-2">
+            <p className="text-sm text-paprika mt-2">
               {allRecipes.length} receita{allRecipes.length !== 1 ? 's' : ''} encontrada{allRecipes.length !== 1 ? 's' : ''}
             </p>
           )}

@@ -50,22 +50,22 @@ export default function Recipe() {
         )}
 
         {recipe && (
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            {/* Header da Receita */}
-            <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white p-8">
-              <h1 className="text-4xl font-bold mb-4">{recipe.title}</h1>
-              <div className="flex items-center justify-center space-x-4">
-                <div className="flex items-center bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                  <span className="text-2xl mr-2">⏱️</span>
-                  <span className="font-medium">{recipe.cookingTime}</span>
+            <div className="bg-warm-white rounded-2xl shadow-food overflow-hidden">
+              {/* Header da Receita */}
+              <div className="bg-food-gradient text-white p-8">
+                <h1 className="text-4xl font-bold mb-4">{recipe.title}</h1>
+                <div className="flex items-center justify-center space-x-4">
+                  <div className="flex items-center bg-warm-white bg-opacity-20 rounded-lg px-4 py-2">
+                    <span className="text-2xl mr-2">⏱️</span>
+                    <span className="font-medium">{recipe.cookingTime}</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
             <div className="p-8">
               {/* Ingredientes */}
               <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <h2 className="text-2xl font-bold text-charcoal mb-6 flex items-center">
                   <span className="text-3xl mr-3">🥘</span>
                   Ingredientes
                 </h2>
@@ -73,10 +73,10 @@ export default function Recipe() {
                   {recipe.ingredients && recipe.ingredients.map((ingredient, index) => (
                     <div 
                       key={index}
-                      className="bg-gray-50 rounded-lg p-4 flex items-center hover:bg-gray-100 transition-colors duration-200"
+                      className="bg-cream rounded-lg p-4 flex items-center hover:bg-golden hover:bg-opacity-20 transition-colors duration-200"
                     >
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      <span className="text-gray-700">{ingredient}</span>
+                      <span className="w-2 h-2 bg-tomato rounded-full mr-3"></span>
+                      <span className="text-brown">{ingredient}</span>
                     </div>
                   ))}
                 </div>
@@ -84,12 +84,12 @@ export default function Recipe() {
 
               {/* Modo de Preparo */}
               <div>
-                <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <h2 className="text-2xl font-bold text-charcoal mb-6 flex items-center">
                   <span className="text-3xl mr-3">👨‍🍳</span>
                   Modo de Preparo
                 </h2>
-                <div className="bg-gray-50 rounded-xl p-6">
-                  <p className="text-gray-700 leading-relaxed text-lg whitespace-pre-line">
+                <div className="bg-cream rounded-xl p-6">
+                  <p className="text-brown leading-relaxed text-lg whitespace-pre-line">
                     {recipe.method}
                   </p>
                 </div>
@@ -97,15 +97,15 @@ export default function Recipe() {
 
               {/* Botões de Ação */}
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/"
-                  className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 shadow-md text-center"
+                <Link 
+                  to="/" 
+                  className="bg-tomato hover:bg-orange text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 shadow-warm text-center"
                 >
                   Ver Todas as Receitas
                 </Link>
-                <Link
-                  to="/create"
-                  className="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 shadow-md text-center"
+                <Link 
+                  to="/create" 
+                  className="bg-fresh-green hover:bg-herb text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 shadow-warm text-center"
                 >
                   Criar Nova Receita
                 </Link>

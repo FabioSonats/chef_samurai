@@ -10,7 +10,7 @@ import Recipe from './pages/recipe/Recipe';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 text-gray-700">
+    <div className="min-h-screen bg-warm-gradient text-charcoal">
       <HashRouter>
         <Navbar />
         <main className="min-h-screen">
