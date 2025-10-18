@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/chef_samurai/static/css/main.b8a42915.css",
-    "main.js": "/chef_samurai/static/js/main.2c2f5544.js",
+    "main.css": "/chef_samurai/static/css/main.2f03e75a.css",
+    "main.js": "/chef_samurai/static/js/main.ff95ee75.js",
     "index.html": "/chef_samurai/index.html",
     "static/media/trashcan.svg": "/chef_samurai/static/media/trashcan.1129c53a10f3c716357028ea030e9d23.svg",
-    "main.b8a42915.css.map": "/chef_samurai/static/css/main.b8a42915.css.map",
-    "main.2c2f5544.js.map": "/chef_samurai/static/js/main.2c2f5544.js.map"
+    "main.2f03e75a.css.map": "/chef_samurai/static/css/main.2f03e75a.css.map",
+    "main.ff95ee75.js.map": "/chef_samurai/static/js/main.ff95ee75.js.map"
   },
   "entrypoints": [
-    "static/css/main.b8a42915.css",
-    "static/js/main.2c2f5544.js"
+    "static/css/main.2f03e75a.css",
+    "static/js/main.ff95ee75.js"
   ]
 }
