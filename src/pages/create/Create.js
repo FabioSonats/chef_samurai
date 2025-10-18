@@ -58,8 +58,8 @@ export default function Create() {
                 <span className="text-lg font-semibold text-charcoal mb-3 block">
                   Nome da Receita
                 </span>
-                <input 
-                  type='text' 
+                <input
+                  type='text'
                   onChange={(e) => setTitle(e.target.value)}
                   value={title}
                   placeholder="Ex: Bolo de Chocolate"
@@ -76,7 +76,7 @@ export default function Create() {
                   Ingredientes
                 </span>
                 <div className="flex gap-2 mb-4">
-                  <input 
+                  <input
                     type='text'
                     onChange={(e) => setNewIngredient(e.target.value)}
                     value={newIngredient}
@@ -84,9 +84,9 @@ export default function Create() {
                     placeholder="Ex: 2 xícaras de farinha"
                     className="flex-1 px-4 py-3 border border-golden border-opacity-30 rounded-lg focus:ring-2 focus:ring-tomato focus:border-transparent transition-all duration-200 bg-warm-white"
                   />
-                  <button 
+                  <button
                     type="button"
-                    onClick={handleAdd} 
+                    onClick={handleAdd}
                     className="bg-fresh-green hover:bg-herb text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 shadow-warm px-6"
                   >
                     Adicionar
@@ -98,7 +98,7 @@ export default function Create() {
                     <p className="text-sm font-medium text-charcoal mb-2">Ingredientes adicionados:</p>
                     <div className="flex flex-wrap gap-2">
                       {ingredients.map(ingredient => (
-                        <span 
+                        <span
                           key={ingredient}
                           className="bg-fresh-green text-white px-3 py-1 rounded-full text-sm flex items-center gap-2"
                         >
@@ -153,7 +153,7 @@ export default function Create() {
 
             {/* Botão de Envio */}
             <div className="text-center">
-              <button 
+              <button
                 type="submit"
                 className="bg-tomato hover:bg-orange text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 shadow-warm text-lg"
               >
